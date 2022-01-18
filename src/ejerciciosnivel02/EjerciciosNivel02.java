@@ -41,6 +41,7 @@ public class EjerciciosNivel02 {
    }
    
    public int strStr (String str1, String str2){
+       //En la vida real se usa .find para que te devuelva el valor
        int aparicion = -1;
        for (int i=0; i<str1.length();i++){
            if(str1.charAt(i) == str2.charAt(0)){
@@ -76,7 +77,9 @@ public class EjerciciosNivel02 {
             {'M', 'A', 'T', 'O'} 
         };
         EjerciciosNivel02 e = new EjerciciosNivel02();
+        //Ejercicio 1
         //System.out.println(e.esEscaleraPalabras(listaPalabras));
+        //Ejercicio 2
         //System.out.println(e.costeErroresADN("ACGT", "TGCA"));
         //System.out.println(e.costeErroresADN("A-C-G-T-ACGT", "TTGGCCAATGCA"));
         //System.out.println(e.costeErroresADN("AAAAAAAA", "TTTATTTT"));
@@ -85,6 +88,7 @@ public class EjerciciosNivel02 {
         //System.out.println(e.costeErroresADN("--------", "ACGTACGT"));
         //System.out.println(e.costeErroresADN("TAATAA", "ATTATT"));
         //System.out.println(e.costeErroresADN("GGGA-GAATATCTGGACT", "CCCTACTTA-AGACCGGT"));
+        //Ejercicio 3
         //System.out.println(e.strStr("DOMUN", "MUN"));
     }
     
