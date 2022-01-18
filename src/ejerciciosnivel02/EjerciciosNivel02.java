@@ -39,6 +39,31 @@ public class EjerciciosNivel02 {
       return contador;
        
    }
+   
+   public int strStr (String str1, String str2){
+       int aparicion = -1;
+       for (int i=0; i<str1.length();i++){
+           if(str1.charAt(i) == str2.charAt(0)){
+              aparicion = i;
+              int j=0;
+              while(j < str2.length() && i < str1.length() && str1.charAt(i)==str2.charAt(j)){
+                  j++;
+                  i++;
+              }
+              if (j == str2.length()){
+                  return aparicion; //Se comprueba que la cadena 2 esta completamente integrada en la primera
+              }
+              if (i == str1.length()){
+                  return -1; //Se ha terminado la palabra 1 y no cabe la 2
+              }
+              //Si llega aqui es por que ha salido del while y no coinciden
+              i = aparicion;
+              aparicion = -1;
+              
+           }
+       }
+      return aparicion;
+   }
   
     public static void main(String[] args) {
         char [][] listaPalabras = {
@@ -52,14 +77,15 @@ public class EjerciciosNivel02 {
         };
         EjerciciosNivel02 e = new EjerciciosNivel02();
         //System.out.println(e.esEscaleraPalabras(listaPalabras));
-        System.out.println(e.costeErroresADN("ACGT", "TGCA"));
-        System.out.println(e.costeErroresADN("A-C-G-T-ACGT", "TTGGCCAATGCA"));
-        System.out.println(e.costeErroresADN("AAAAAAAA", "TTTATTTT"));
-        System.out.println(e.costeErroresADN("GATTACA", "CTATT-T"));
-        System.out.println(e.costeErroresADN("CAT-TAG-ACT", "GTATATCCAAA"));
-        System.out.println(e.costeErroresADN("--------", "ACGTACGT"));
-        System.out.println(e.costeErroresADN("TAATAA", "ATTATT"));
-        System.out.println(e.costeErroresADN("GGGA-GAATATCTGGACT", "CCCTACTTA-AGACCGGT"));
+        //System.out.println(e.costeErroresADN("ACGT", "TGCA"));
+        //System.out.println(e.costeErroresADN("A-C-G-T-ACGT", "TTGGCCAATGCA"));
+        //System.out.println(e.costeErroresADN("AAAAAAAA", "TTTATTTT"));
+        //System.out.println(e.costeErroresADN("GATTACA", "CTATT-T"));
+        //System.out.println(e.costeErroresADN("CAT-TAG-ACT", "GTATATCCAAA"));
+        //System.out.println(e.costeErroresADN("--------", "ACGTACGT"));
+        //System.out.println(e.costeErroresADN("TAATAA", "ATTATT"));
+        //System.out.println(e.costeErroresADN("GGGA-GAATATCTGGACT", "CCCTACTTA-AGACCGGT"));
+        //System.out.println(e.strStr("DOMUN", "MUN"));
     }
     
 }
